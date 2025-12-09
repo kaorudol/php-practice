@@ -1,17 +1,17 @@
 <?php
 // Q1 tic-tac問題
 <?php
-$array = [];
 for ($i = 1; $i <= 100; $i++) {
     $array[] = $i;
-if($array[$i -1] == ($i % 4 === 0)){
-    echo  'tic' . "\n";
-} if($array[$i -1] == ($i % 5 === 0)){
-    echo  'tac' . "\n";
-} if($array[$i -1] == ($i % 4 === 0) && $array[$i -1] === ($i % 5 === 0)){  
+
+if($i % 4 === 0 && $i % 5 === 0){
     echo  'tic-tac' . "\n";
+}else if($i % 5 === 0){
+    echo  'tac' . "\n";
+}else if($i % 4 === 0){  
+    echo  'tic' . "\n";
 } else {
-    echo $array[$i - 1] ."\n" ;
+    echo $i ."\n" ;
 }}
 ?>
 
@@ -84,3 +84,10 @@ $diff = $date->diff($date2);
 echo $diff->format('あの日から%a日経過しました。'); 
 
 ?>
+
+
+
+
+
+
+
