@@ -23,13 +23,10 @@ var_dump($dayTime);
 
 // Q4 条件分岐-1 if文
 <?php
-$device = 'asuos';
+$device = 'os';
 if ($device === 'windows' || $device === 'mac') {
-    if ($device === 'windows') {
-        echo '使用OSは、windowsです。';
-    } else {
-        echo '使用OSは、macです。';
-    }
+    $newdevice = ($device === 'windows') ? '使用OSは、windowsです。':'使用OSは、macです。';
+    echo $newdevice;
 } else {
     echo 'どちらでもありません。';
 }
