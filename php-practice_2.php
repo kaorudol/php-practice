@@ -1,9 +1,7 @@
 <?php
-// Q1 tic-tac問題
+// Q1 tic-tac問題*
 <?php
 for ($i = 1; $i <= 100; $i++) {
-    $array[] = $i;
-
 if($i % 4 === 0 && $i % 5 === 0){
     echo  'tic-tac' . "\n";
 }else if($i % 5 === 0){
@@ -41,14 +39,14 @@ foreach($personalInfos as $key =>& $val){
 var_dump($personalInfos);
 ?>
 
-// Q3 オブジェクト-1
+// Q3 オブジェクト-1*
 <?php
 $yamada = new Student('120', '山田');
 echo '学籍番号' .$yamada->studentId . '番の生徒は' . $yamada->studentName . 'です。';
 ?>
 
 
-// Q4 オブジェクト-2
+// Q4 オブジェクト-2*
 <?php
 class Student
 {
@@ -71,7 +69,7 @@ $yamada = new Student(120, '山田');
 $yamada->attend('PHP');
 ?>
 
-// Q5 定義済みクラス
+// Q5 定義済みクラス*
 //問題1
 <?php
 $date = new DateTime();
@@ -86,7 +84,44 @@ echo $diff->format('あの日から%a日経過しました。');
 ?>
 
 
+//問題1
+class Pokemon{
 
+    public $name;
+    public $element;
+
+    public function __construct($name, $element)
+    {
+        $this->PokemonName = $name;
+        $this->PokemonElement = $element;
+    }
+
+    Public function attack($skill){
+        echo "いけ、" . $this->PokemonElement . "ポケモン" . $this->PokemonName . "!!" . $skill . "だ!!";
+    }
+}
+$pikachu = new Pokemon('ピカチュウ', 'ねずみ');
+$pikachu->attack('10万ボルト');
+
+
+//問題２
+class Employee{
+
+    public $id;
+    public $name;
+
+    public function __construct($id, $name)
+    {
+        $this->employeeId = $id;
+        $this->employeeName = $name;
+    }
+
+    Public function checkIn(){
+        echo $this->employeeName . "が出勤しました。社員ID：" . $this->employeeId;
+    }
+}
+$employee = new Employee('1', '山田太郎');
+$employee->checkIn();
 
 
 

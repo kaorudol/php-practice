@@ -25,8 +25,7 @@ var_dump($dayTime);
 <?php
 $device = 'os';
 if ($device === 'windows' || $device === 'mac') {
-    $newdevice = ($device === 'windows') ? '使用OSは、windowsです。':'使用OSは、macです。';
-    echo $newdevice;
+    echo '使用OSは、'. $device . 'です。';
 } else {
     echo 'どちらでもありません。';
 }
@@ -43,8 +42,8 @@ echo $message;
 <?php
 $prefecture = ['群馬県', '茨城県', '栃木県', '千葉県', '埼玉県', '東京都', '神奈川県'];
 var_dump($prefecture);
-$newPreecture = $prefecture[2]. 'と' . $prefecture[3] . 'は関東地方の都道府県です。';
-var_dump($newPreecture)
+$newPrefecture = $prefecture[2]. 'と' . $prefecture[3] . 'は関東地方の都道府県です。';
+var_dump($newPrefecture)
 ?>
 
 // Q7 連想配列-1
@@ -74,7 +73,7 @@ $capital['愛知県'] = '名古屋市';
 $capital['大阪府'] = '大阪市';
 var_dump($capital);
     foreach ($capital as $prefecture => $city) {
-    if (in_array($prefecture, $kanto_regions)) {
+    if (in_array($prefecture, $kanto_regions)) {                                                       in_array(検索したい値, 検索される配列)
         $messageCapital = $prefecture . 'の県庁所在地は、' . $city . 'です。';
     } else {
         $messageCapital = $prefecture . 'は関東地方ではありません。';
